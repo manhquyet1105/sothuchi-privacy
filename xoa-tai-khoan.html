@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yêu cầu xoá tài khoản và dữ liệu — Sổ Thu Chi</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; max-width: 720px; padding: 24px 20px 64px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #1B1F1D; line-height: 1.65; font-size: 16px; background: #fff;
+  }
+  h1 { font-size: 26px; line-height: 1.3; }
+  h2 { font-size: 19px; margin-top: 36px; color: #0B8457; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  ol { padding-left: 22px; }
+  ol li { margin: 10px 0; }
+  .muted { color: #5B635F; font-size: 14px; }
+  .box { background: #E3F3EC; border-radius: 12px; padding: 14px 16px; margin: 16px 0; }
+  code { background: #F0F2F0; padding: 2px 6px; border-radius: 6px; font-size: 14px; }
+  a { color: #0B8457; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 15px; }
+  th, td { border: 1px solid #E4E7E4; padding: 9px 11px; text-align: left; vertical-align: top; }
+  th { background: #F0F2F0; }
+</style>
+</head>
+<body>
+
+<h1>🗑️ Yêu cầu xoá tài khoản và dữ liệu</h1>
+<p class="muted">Ứng dụng Android <b>Sổ Thu Chi</b> (gói <code>com.quyetnm.sothuchi</code>) ·
+Cập nhật: 27/07/2026 · <a href="./privacy-policy.html">Chính sách quyền riêng tư</a></p>
+
+<div class="box">
+<b>Lưu ý trước tiên:</b> <b>Sổ Thu Chi</b> dùng được đầy đủ <b>không cần tài khoản</b>.
+Nếu bạn chưa từng đăng nhập bằng email, chúng tôi <b>không có bất kỳ dữ liệu nào</b>
+của bạn trên máy chủ — toàn bộ sổ thu chi nằm trên điện thoại của bạn, và bạn xoá hết
+bằng cách gỡ ứng dụng.
+</div>
+
+<h2>1 · Cách yêu cầu xoá tài khoản</h2>
+<p>Tài khoản chỉ tồn tại nếu bạn từng đăng nhập bằng email (mã OTP) để dùng tính năng
+<b>hộ gia đình</b>. Để xoá tài khoản đó cùng dữ liệu liên quan trên máy chủ:</p>
+<ol>
+  <li>Gửi email tới <b><a href="mailto:nguyenmanhquyet2406@gmail.com?subject=Y%C3%AAu%20c%E1%BA%A7u%20xo%C3%A1%20t%C3%A0i%20kho%E1%BA%A3n%20-%20S%E1%BB%95%20Thu%20Chi">nguyenmanhquyet2406@gmail.com</a></b>
+  với tiêu đề: <code>Yêu cầu xoá tài khoản - Sổ Thu Chi</code></li>
+  <li>Trong email ghi rõ <b>địa chỉ email bạn đã dùng để đăng nhập</b> ứng dụng
+  (phải gửi từ chính email đó để chúng tôi xác minh là bạn).</li>
+  <li>Nói rõ bạn muốn <b>xoá tài khoản</b>, hoặc <b>chỉ xoá dữ liệu</b> mà giữ tài khoản
+  (xem mục 3).</li>
+  <li>Chúng tôi xử lý và xoá <b>trong vòng 30 ngày</b> kể từ khi nhận được yêu cầu, rồi
+  gửi email xác nhận cho bạn khi xong.</li>
+</ol>
+<p>Bạn cũng có thể tự làm ngay trong ứng dụng, không cần chờ chúng tôi: vào tab
+<b>Thêm</b> → <b>Rời hộ gia đình</b> và <b>Đăng xuất</b>. Khi đó máy bạn ngừng đồng bộ
+và dữ liệu mới không còn được gửi lên máy chủ (dữ liệu đã đồng bộ trước đó vẫn cần
+yêu cầu xoá theo các bước trên).</p>
+
+<h2>2 · Dữ liệu nào bị xoá, dữ liệu nào được giữ lại</h2>
+<table>
+  <tr><th>Dữ liệu</th><th>Xử lý khi bạn yêu cầu xoá tài khoản</th></tr>
+  <tr>
+    <td><b>Tài khoản đăng nhập</b> (địa chỉ email)</td>
+    <td><b>Bị xoá</b> khỏi hệ thống xác thực trên máy chủ.</td>
+  </tr>
+  <tr>
+    <td><b>Tên hiển thị</b> và bản ghi thành viên hộ của bạn</td>
+    <td><b>Bị xoá.</b></td>
+  </tr>
+  <tr>
+    <td><b>Dữ liệu hộ đã đồng bộ</b>: giao dịch, ví, danh mục, ngân sách,
+    giao dịch định kỳ</td>
+    <td><b>Bị xoá</b> nếu bạn là thành viên duy nhất còn lại của hộ.<br>
+    <b>Được giữ lại</b> nếu hộ còn thành viên khác — đây là sổ <i>dùng chung</i>, xoá đi
+    sẽ mất dữ liệu của người khác. Khi đó chỉ tài khoản và bản ghi thành viên của bạn
+    bị xoá, và bạn không còn truy cập được hộ đó nữa.</td>
+  </tr>
+  <tr>
+    <td><b>Dữ liệu trên điện thoại của bạn</b> (toàn bộ sổ thu chi lưu cục bộ)</td>
+    <td><b>Không bị chúng tôi xoá</b> — chúng tôi không truy cập được. Bạn tự xoá bằng
+    cách gỡ ứng dụng khỏi máy.</td>
+  </tr>
+  <tr>
+    <td><b>File sao lưu <code>.stc</code> và file CSV bạn đã xuất</b></td>
+    <td><b>Do bạn tự giữ</b>; chúng tôi không có bản nào và không thể xoá giúp.</td>
+  </tr>
+  <tr>
+    <td><b>Nội dung thông báo ngân hàng</b> (nếu bạn bật tính năng bắt noti)</td>
+    <td>Chưa từng được gửi lên máy chủ — xử lý và lưu <b>hoàn toàn trên máy bạn</b>,
+    nên không có gì để xoá phía chúng tôi.</td>
+  </tr>
+  <tr>
+    <td><b>Thông tin thanh toán</b> (mua Pro trọn đời)</td>
+    <td>Do <b>Google Play</b> xử lý và lưu giữ, chúng tôi không bao giờ nhận được.
+    Lịch sử mua hàng thuộc tài khoản Google của bạn, hãy liên hệ Google Play.</td>
+  </tr>
+</table>
+
+<h2>3 · Xoá dữ liệu mà không xoá tài khoản</h2>
+<ul>
+  <li><b>Ngay trong ứng dụng, bất cứ lúc nào:</b> xoá từng giao dịch / ví / danh mục /
+  ngân sách; <b>Rời hộ gia đình</b>; tắt <b>Bắt noti ngân hàng</b>. Thay đổi được đồng bộ
+  và dữ liệu tương ứng bị xoá khỏi máy chủ.</li>
+  <li><b>Hoặc gửi email</b> theo mục 1 và ghi rõ bạn muốn xoá dữ liệu nào nhưng
+  <b>giữ tài khoản</b> để còn dùng tiếp.</li>
+</ul>
+
+<h2>4 · Thời gian lưu giữ</h2>
+<ul>
+  <li>Dữ liệu bị xoá khỏi cơ sở dữ liệu trong <b>tối đa 30 ngày</b> kể từ khi nhận
+  yêu cầu; thường là trong vài ngày.</li>
+  <li>Sau khi xoá, chúng tôi <b>không giữ thêm bản sao nào</b>. Bản sao lưu kỹ thuật của
+  nhà cung cấp hạ tầng máy chủ (Supabase) bị ghi đè tự động theo chu kỳ sao lưu của họ.</li>
+  <li>Chúng tôi không bán, không chia sẻ dữ liệu của bạn cho bên thứ ba nào để quảng cáo
+  hay tiếp thị — kể cả trước khi xoá.</li>
+</ul>
+
+<h2>5 · Liên hệ</h2>
+<p><b><a href="mailto:nguyenmanhquyet2406@gmail.com">nguyenmanhquyet2406@gmail.com</a></b>
+— mọi câu hỏi về xoá tài khoản, xoá dữ liệu hoặc quyền riêng tư.</p>
+
+<hr style="border:0;border-top:2px solid #E4E7E4;margin:40px 0 20px">
+<h2>English summary — Account &amp; data deletion</h2>
+<p><b>Sổ Thu Chi</b> (<code>com.quyetnm.sothuchi</code>) is fully usable without an
+account. An account exists only if you signed in with an email one-time code to use the
+optional <b>household sharing</b> feature.</p>
+<ul>
+  <li><b>To request deletion:</b> email
+  <a href="mailto:nguyenmanhquyet2406@gmail.com">nguyenmanhquyet2406@gmail.com</a> from
+  the address you signed in with, subject <code>Yêu cầu xoá tài khoản - Sổ Thu Chi</code>
+  (Account deletion request). We delete <b>within 30 days</b> and confirm by email.</li>
+  <li><b>Deleted:</b> your login email, your display name and household membership
+  record, and the household's synced data (transactions, wallets, categories, budgets,
+  recurring rules) if you are the last remaining member of that household.</li>
+  <li><b>Retained:</b> a shared household's data if other members remain (it is their
+  data too); data stored locally on your phone, which we cannot access — uninstall the
+  app to erase it; backup <code>.stc</code>/CSV files you exported and keep yourself;
+  payment records, which are held by Google Play and never reach us.</li>
+  <li><b>Delete data without deleting your account:</b> delete individual records, leave
+  the household, or turn off bank-notification capture — all inside the app, anytime.</li>
+</ul>
+
+</body>
+</html>
