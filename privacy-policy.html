@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chính sách quyền riêng tư — Sổ Thu Chi</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; max-width: 720px; padding: 24px 20px 64px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #1B1F1D; line-height: 1.65; font-size: 16px; background: #fff;
+  }
+  h1 { font-size: 26px; line-height: 1.3; }
+  h2 { font-size: 19px; margin-top: 36px; color: #0B8457; }
+  h3 { font-size: 16px; margin-top: 24px; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  .muted { color: #5B635F; font-size: 14px; }
+  .box {
+    background: #E3F3EC; border-radius: 12px; padding: 14px 16px; margin: 16px 0;
+  }
+  .en { border-top: 2px solid #E4E7E4; margin-top: 48px; padding-top: 24px; }
+  code { background: #F0F2F0; padding: 2px 6px; border-radius: 6px; font-size: 14px; }
+  a { color: #0B8457; }
+</style>
+</head>
+<body>
+
+<h1>📒 Sổ Thu Chi — Chính sách quyền riêng tư</h1>
+<p class="muted">Hiệu lực từ: 26/07/2026 · Áp dụng cho ứng dụng Android “Sổ Thu Chi”
+(gói <code>com.quyetnm.sothuchi</code>).</p>
+
+<div class="box">
+<b>Tóm tắt một câu:</b> dữ liệu thu chi của bạn nằm <b>trên máy của bạn</b>;
+app không gửi dữ liệu đi đâu, trừ khi <b>chính bạn</b> bật tính năng đồng bộ
+hộ gia đình (khi đó dữ liệu chỉ đồng bộ giữa các thành viên hộ của bạn).
+Chúng tôi không bán, không chia sẻ dữ liệu của bạn cho bên thứ ba nào để
+quảng cáo hay tiếp thị.
+</div>
+
+<h2>1 · Dữ liệu app lưu và nơi lưu</h2>
+<ul>
+  <li><b>Giao dịch thu chi, ví, danh mục, ngân sách, giao dịch định kỳ</b> —
+  lưu trong cơ sở dữ liệu <b>ngay trên điện thoại</b> (local-first). App dùng
+  đầy đủ khi không có mạng.</li>
+  <li><b>Không cần tài khoản</b> để dùng app một mình. Mọi tính năng nhập
+  thông minh (gõ câu, giọng nói, quét hóa đơn, bắt thông báo) xử lý
+  <b>100% trên máy</b>, không gọi máy chủ AI nào.</li>
+</ul>
+
+<h2>2 · Quyền truy cập thông báo (Notification access)</h2>
+<ul>
+  <li>Tính năng <b>tùy chọn</b> “Bắt noti ngân hàng”: nếu bạn bật, app đọc
+  <b>chỉ thông báo của các app ngân hàng / ví điện tử</b> (Vietcombank,
+  Techcombank, MoMo, ZaloPay, BIDV…) để <b>gợi ý</b> giao dịch vào hộp chờ —
+  bạn duyệt thì mới ghi vào sổ.</li>
+  <li>Nội dung thông báo được xử lý <b>ngay trên máy</b>, KHÔNG gửi đi đâu,
+  KHÔNG lưu thông báo của app khác.</li>
+  <li>App <b>KHÔNG</b> đọc SMS, <b>KHÔNG</b> kết nối trực tiếp tài khoản
+  ngân hàng của bạn.</li>
+  <li>Bạn tắt tính năng này bất cứ lúc nào trong tab <b>Thêm</b> của app hoặc
+  trong Cài đặt Android.</li>
+</ul>
+
+<h2>3 · Đồng bộ hộ gia đình (tùy chọn, phải đăng nhập mới có)</h2>
+<ul>
+  <li>Khi bạn <b>chủ động</b> đăng nhập bằng email (mã OTP) và tạo/vào một
+  hộ gia đình, dữ liệu thu chi của hộ được đồng bộ qua máy chủ
+  <b>Supabase</b> để các thành viên trong hộ thấy chung một sổ.</li>
+  <li>Dữ liệu được gửi đi khi đó gồm: <b>email đăng nhập</b>, tên hiển thị
+  bạn tự đặt, và dữ liệu thu chi của hộ (giao dịch, ví, danh mục, ngân sách,
+  giao dịch định kỳ).</li>
+  <li>Mỗi hộ chỉ thành viên hộ đó đọc được (kiểm soát truy cập ở tầng
+  cơ sở dữ liệu — Row Level Security).</li>
+  <li>Rời hộ / xóa tài khoản: dữ liệu cá nhân trên máy bạn giữ nguyên;
+  bạn có thể yêu cầu xóa dữ liệu trên máy chủ (mục 7).</li>
+</ul>
+
+<h2>4 · Quảng cáo (chỉ bản Free) và mua trong ứng dụng</h2>
+<ul>
+  <li>Bản Free hiển thị <b>banner</b> của <b>Google AdMob</b> ở 2 màn hình
+  (Tổng quan và Sổ). AdMob có thể thu thập định danh quảng cáo của thiết bị
+  theo chính sách của Google —
+  xem <a href="https://policies.google.com/privacy">chính sách của Google</a>.</li>
+  <li>Với người dùng thuộc khu vực yêu cầu (EEA/UK…), app hiển thị form
+  <b>đồng ý (consent)</b> theo chuẩn Google UMP trước khi hiện quảng cáo;
+  bạn đổi lựa chọn bất cứ lúc nào tại mục “Quản lý quyền riêng tư quảng cáo”
+  trong tab Thêm.</li>
+  <li><b>Pro trọn đời</b> là giao dịch mua một lần qua <b>Google Play</b>.
+  App không thu thập hay xử lý số thẻ/thông tin thanh toán — Google Play
+  xử lý toàn bộ.</li>
+  <li>Mua Pro → app không hiện quảng cáo nữa.</li>
+</ul>
+
+<h2>5 · Camera và micro</h2>
+<ul>
+  <li><b>Camera</b>: chỉ dùng khi bạn bấm “Chụp hóa đơn”. Ảnh được nhận dạng
+  chữ <b>ngay trên máy</b> (Google ML Kit on-device), ảnh không rời điện thoại.</li>
+  <li><b>Micro</b>: chỉ dùng khi bạn bấm nhập bằng giọng nói; câu nói được
+  nhận dạng bằng engine của hệ điều hành, xử lý tại chỗ thành giao dịch.</li>
+</ul>
+
+<h2>6 · Sao lưu do bạn tự giữ</h2>
+<ul>
+  <li>Tính năng “Sao lưu file (mã hóa)” tạo file <code>.stc</code> được
+  <b>mã hóa AES-256</b> bằng mật khẩu bạn đặt. Bạn tự quyết định lưu file ở
+  đâu (Zalo, Drive, máy tính…). Không có mật khẩu thì không ai mở được file —
+  kể cả chúng tôi.</li>
+  <li>“Xuất CSV” tạo file bảng tính <b>không mã hóa</b> để bạn mở bằng
+  Excel/Sheets — hãy tự cân nhắc nơi chia sẻ.</li>
+</ul>
+
+<h2>7 · Quyền của bạn</h2>
+<ul>
+  <li>Dùng app không tài khoản → mọi dữ liệu nằm trên máy; xóa app là hết
+  (hãy sao lưu trước nếu cần).</li>
+  <li>Tắt “Bắt noti ngân hàng”, tắt đồng bộ, rời hộ — bất cứ lúc nào trong app.</li>
+  <li>Xuất toàn bộ dữ liệu (CSV / backup mã hóa) — bất cứ lúc nào.</li>
+  <li>Yêu cầu xóa tài khoản + dữ liệu đồng bộ trên máy chủ: gửi email cho
+  chúng tôi (dưới đây), xử lý trong 30 ngày.</li>
+</ul>
+
+<h2>8 · Trẻ em</h2>
+<p>App là công cụ quản lý chi tiêu gia đình, không nhắm tới trẻ em dưới 13 tuổi
+và không cố ý thu thập dữ liệu của trẻ em.</p>
+
+<h2>9 · Thay đổi chính sách</h2>
+<p>Khi chính sách thay đổi, chúng tôi cập nhật trang này và ghi ngày hiệu lực
+mới ở đầu trang.</p>
+
+<h2>10 · Liên hệ</h2>
+<p>Mọi câu hỏi về quyền riêng tư / yêu cầu xóa dữ liệu:
+<b><a href="mailto:nguyenmanhquyet2406@gmail.com">nguyenmanhquyet2406@gmail.com</a></b></p>
+
+<div class="en">
+<h2>English summary</h2>
+<p><b>Sổ Thu Chi</b> is a local-first family expense tracker for Android.</p>
+<ul>
+  <li>Your financial data is stored <b>on your device</b>. No account is
+  required; all “smart input” features (text/voice parsing, receipt OCR,
+  bank-notification capture) run entirely on-device. No paid AI/LLM APIs.</li>
+  <li><b>Notification access</b> (optional, off by default): if you enable it,
+  the app reads notifications <b>from banking/e-wallet apps only</b> to suggest
+  draft transactions that you confirm manually. Content is processed on-device
+  and never uploaded. The app does not read SMS and does not connect to your
+  bank account.</li>
+  <li><b>Optional family sync</b>: if you sign in with email OTP and join a
+  household, your household's expense data and your email are synced via
+  Supabase, protected by row-level security so only household members can
+  access it.</li>
+  <li><b>Ads</b> (free tier only): Google AdMob banners on two screens, with
+  Google UMP consent where required. The one-time <b>Pro</b> purchase is
+  processed by Google Play; we never see your payment details. Pro removes ads.</li>
+  <li><b>Camera/microphone</b> are used only for receipt scanning and voice
+  input, processed locally.</li>
+  <li><b>Backups</b> are AES-256 encrypted files that you keep yourself; CSV
+  export is unencrypted.</li>
+  <li>Your rights: turn features off anytime, export everything, request
+  server-data deletion via the contact email above (30 days).</li>
+</ul>
+</div>
+
+</body>
+</html>
